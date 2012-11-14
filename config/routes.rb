@@ -1,4 +1,8 @@
 Sesuso::Application.routes.draw do
+  devise_for :interviewers
+
+  resources :interviewers
+
   get "front_end/index"
 
   devise_for :admins

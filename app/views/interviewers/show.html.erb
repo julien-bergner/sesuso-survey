@@ -1,0 +1,60 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>First name:</b>
+  <%= @interviewer.first_name %>
+</p>
+
+<p>
+  <b>Last name:</b>
+  <%= @interviewer.last_name %>
+</p>
+
+<p>
+  <b>Street:</b>
+  <%= @interviewer.street %>
+</p>
+
+<p>
+  <b>Street number:</b>
+  <%= @interviewer.street_number %>
+</p>
+
+<p>
+  <b>Zip:</b>
+  <%= @interviewer.zip %>
+</p>
+
+<p>
+  <b>Email:</b>
+  <%= @interviewer.email %>
+</p>
+
+<p>
+  <b>Mobile phone:</b>
+  <%= @interviewer.mobile_phone %>
+</p>
+
+<p>
+  <b>Date of birth:</b>
+  <%= @interviewer.date_of_birth %>
+</p>
+
+<p>
+  <b>Drivers license:</b>
+  <%= @interviewer.drivers_license %>
+</p>
+
+<p>
+  <b>Bank account number:</b>
+  <%= @interviewer.bank_account_number %>
+</p>
+
+<p>
+  <b>Bank identification code:</b>
+  <%= @interviewer.bank_identification_code %>
+</p>
+
+
+<%= link_to 'Edit', edit_interviewer_path(@interviewer) %> |
+<%= link_to 'Back', interviewers_path %>

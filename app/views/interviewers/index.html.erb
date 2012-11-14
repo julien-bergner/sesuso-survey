@@ -1,0 +1,43 @@
+<h1>Listing interviewers</h1>
+
+<table>
+  <tr>
+    <th>First name</th>
+    <th>Last name</th>
+    <th>Street</th>
+    <th>Street number</th>
+    <th>Zip</th>
+    <th>Email</th>
+    <th>Mobile phone</th>
+    <th>Date of birth</th>
+    <th>Drivers license</th>
+    <th>Bank account number</th>
+    <th>Bank identification code</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @interviewers.each do |interviewer| %>
+  <tr>
+    <td><%= interviewer.first_name %></td>
+    <td><%= interviewer.last_name %></td>
+    <td><%= interviewer.street %></td>
+    <td><%= interviewer.street_number %></td>
+    <td><%= interviewer.zip %></td>
+    <td><%= interviewer.email %></td>
+    <td><%= interviewer.mobile_phone %></td>
+    <td><%= interviewer.date_of_birth %></td>
+    <td><%= interviewer.drivers_license %></td>
+    <td><%= interviewer.bank_account_number %></td>
+    <td><%= interviewer.bank_identification_code %></td>
+    <td><%= link_to 'Show', interviewer %></td>
+    <td><%= link_to 'Edit', edit_interviewer_path(interviewer) %></td>
+    <td><%= link_to 'Destroy', interviewer, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Interviewer', new_interviewer_path %>
