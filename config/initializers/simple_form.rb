@@ -175,4 +175,6 @@ SimpleForm.setup do |config|
 
   # Cache SimpleForm inputs discovery
   # config.cache_discovery = !Rails.env.development?
+
+  config.form_class = 'simple_form form-horizontal'
 end
