@@ -1,4 +1,6 @@
 Sesuso::Application.routes.draw do
+  get "front_end/index"
+
   devise_for :admins
 
   # The priority is based upon order of creation:
