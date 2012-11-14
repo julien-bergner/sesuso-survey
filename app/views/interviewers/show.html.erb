@@ -1,60 +1,41 @@
-<p id="notice"><%= notice %></p>
+<%- model_class = Interviewer -%>
+<div class="page-header">
+  <h1><%=t '.title', :default => model_class.model_name.human %></h1>
+</div>
 
-<p>
-  <b>First name:</b>
-  <%= @interviewer.first_name %>
-</p>
+<dl class="dl-horizontal">
+  <dt><strong><%= model_class.human_attribute_name(:first_name) %>:</strong></dt>
+  <dd><%= @interviewer.first_name %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:last_name) %>:</strong></dt>
+  <dd><%= @interviewer.last_name %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:street) %>:</strong></dt>
+  <dd><%= @interviewer.street %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:street_number) %>:</strong></dt>
+  <dd><%= @interviewer.street_number %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:zip) %>:</strong></dt>
+  <dd><%= @interviewer.zip %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:mobile_phone) %>:</strong></dt>
+  <dd><%= @interviewer.mobile_phone %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:date_of_birth) %>:</strong></dt>
+  <dd><%= @interviewer.date_of_birth %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:drivers_license) %>:</strong></dt>
+  <dd><%= @interviewer.drivers_license %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:bank_account_number) %>:</strong></dt>
+  <dd><%= @interviewer.bank_account_number %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:bank_identification_code) %>:</strong></dt>
+  <dd><%= @interviewer.bank_identification_code %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:email) %>:</strong></dt>
+  <dd><%= @interviewer.email %></dd>
+</dl>
 
-<p>
-  <b>Last name:</b>
-  <%= @interviewer.last_name %>
-</p>
-
-<p>
-  <b>Street:</b>
-  <%= @interviewer.street %>
-</p>
-
-<p>
-  <b>Street number:</b>
-  <%= @interviewer.street_number %>
-</p>
-
-<p>
-  <b>Zip:</b>
-  <%= @interviewer.zip %>
-</p>
-
-<p>
-  <b>Email:</b>
-  <%= @interviewer.email %>
-</p>
-
-<p>
-  <b>Mobile phone:</b>
-  <%= @interviewer.mobile_phone %>
-</p>
-
-<p>
-  <b>Date of birth:</b>
-  <%= @interviewer.date_of_birth %>
-</p>
-
-<p>
-  <b>Drivers license:</b>
-  <%= @interviewer.drivers_license %>
-</p>
-
-<p>
-  <b>Bank account number:</b>
-  <%= @interviewer.bank_account_number %>
-</p>
-
-<p>
-  <b>Bank identification code:</b>
-  <%= @interviewer.bank_identification_code %>
-</p>
-
-
-<%= link_to 'Edit', edit_interviewer_path(@interviewer) %> |
-<%= link_to 'Back', interviewers_path %>
+<div class="form-actions">
+  <%= link_to t('.back', :default => t("helpers.links.back")),
+              interviewers_path, :class => 'btn'  %>
+  <%= link_to t('.edit', :default => t("helpers.links.edit")),
+              edit_interviewer_path(@interviewer), :class => 'btn' %>
+  <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
+              interviewer_path(@interviewer),
+              :method => 'delete',
+              :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
+              :class => 'btn btn-danger' %>
+</div>

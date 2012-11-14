@@ -1,61 +1,18 @@
-<%= form_for(@interviewer) do |f| %>
-  <% if @interviewer.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@interviewer.errors.count, "error") %> prohibited this interviewer from being saved:</h2>
-
-      <ul>
-      <% @interviewer.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
-
-  <div class="field">
-    <%= f.label :first_name %><br />
-    <%= f.text_field :first_name %>
-  </div>
-  <div class="field">
-    <%= f.label :last_name %><br />
-    <%= f.text_field :last_name %>
-  </div>
-  <div class="field">
-    <%= f.label :street %><br />
-    <%= f.text_field :street %>
-  </div>
-  <div class="field">
-    <%= f.label :street_number %><br />
-    <%= f.text_field :street_number %>
-  </div>
-  <div class="field">
-    <%= f.label :zip %><br />
-    <%= f.text_field :zip %>
-  </div>
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.text_field :email %>
-  </div>
-  <div class="field">
-    <%= f.label :mobile_phone %><br />
-    <%= f.text_field :mobile_phone %>
-  </div>
-  <div class="field">
-    <%= f.label :date_of_birth %><br />
-    <%= f.date_select :date_of_birth %>
-  </div>
-  <div class="field">
-    <%= f.label :drivers_license %><br />
-    <%= f.check_box :drivers_license %>
-  </div>
-  <div class="field">
-    <%= f.label :bank_account_number %><br />
-    <%= f.text_field :bank_account_number %>
-  </div>
-  <div class="field">
-    <%= f.label :bank_identification_code %><br />
-    <%= f.text_field :bank_identification_code %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
+<%= simple_form_for @interviewer, :html => { :class => 'form-horizontal' } do |f| %>
+  <%= f.input :first_name %>
+  <%= f.input :last_name %>
+  <%= f.input :street %>
+  <%= f.input :street_number %>
+  <%= f.input :zip %>
+  <%= f.input :mobile_phone %>
+  <%= f.input :date_of_birth %>
+  <%= f.input :drivers_license %>
+  <%= f.input :bank_account_number %>
+  <%= f.input :bank_identification_code %>
+  <%= f.input :email %>
+  <div class="form-actions">
+    <%= f.button :submit, :class => 'btn-primary' %>
+    <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+                interviewers_path, :class => 'btn' %>
   </div>
 <% end %>
