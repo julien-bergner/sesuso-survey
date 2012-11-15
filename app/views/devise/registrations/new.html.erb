@@ -1,10 +1,21 @@
 <h2>Sign up</h2>
 <%= simple_form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => {:class => 'form-vertical' }) do |f| %>
   <%= f.error_notification %>
-  <%= f.input :name, :autofocus => true %> 
+  <%= f.input :first_name, :autofocus => true %>
+  <%= f.input :last_name %>
   <%= f.input :email, :required => true %>
   <%= f.input :password, :required => true %>
   <%= f.input :password_confirmation, :required => true %>
+
+  <%= f.input:street %>
+  <%= f.input:street_number %>
+  <%= f.input:zip %>
+  <%= f.input:mobile_phone %>
+  <%= f.input:date_of_birth %>
+  <%= f.input:drivers_license %>
+  <%= f.input:bank_account_number %>
+  <%= f.input:bank_identification_code %>
+
   <%= f.button :submit, 'Sign up', :class => 'btn-primary' %>
 <% end %>
 <%= render "devise/shared/links" %>
