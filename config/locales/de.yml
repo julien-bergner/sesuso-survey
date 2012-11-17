@@ -1,4 +1,21 @@
 de:
+  home:
+    index:
+      title: "Willkommen!"
+  layouts:
+    navigation:
+      login: "Einloggen"
+      logout: "Ausloggen"
+      edit_account: "Account bearbeiten"
+      administrate_users: "Benutzer verwalten"
+      signup: "Registrieren"
+  devise:
+    registrations:
+      new:
+        title: "Registrieren"
+        signup: "Weiter"
+
+
   date:
     abbr_day_names:
     - So

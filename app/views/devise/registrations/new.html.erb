@@ -1,5 +1,5 @@
-<h2>Sign up</h2>
-<%= simple_form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => {:class => 'form-vertical' }) do |f| %>
+<h2><%= t('.title') %></h2>
+<%= simple_form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => {:class => 'form-horizontal' }) do |f| %>
   <%= f.error_notification %>
   <%= f.input :first_name, :autofocus => true %>
   <%= f.input :last_name %>
@@ -16,6 +16,5 @@
   <%= f.input:bank_account_number %>
   <%= f.input:bank_identification_code %>
 
-  <%= f.button :submit, 'Sign up', :class => 'btn-primary' %>
+  <%= f.button :submit, t('.signup'), :class => 'btn-primary' %>
 <% end %>
-<%= render "devise/shared/links" %>

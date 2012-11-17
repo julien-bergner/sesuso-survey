@@ -1,17 +1,31 @@
-en:
+de:
   simple_form:
-    "yes": 'Yes'
-    "no": 'No'
+    "yes": 'Ja'
+    "no": 'Nein'
     required:
-      text: 'required'
+      text: 'Pflichtfeld'
       mark: '*'
       # You can uncomment the line below if you need to overwrite the whole required html.
       # When using html, text and mark won't be used.
       # html: '<abbr title="required">*</abbr>'
     error_notification:
-      default_message: "Please review the problems below:"
+      default_message: "Bitte korrigiere deine Eingaben:"
     # Labels and hints examples
-    # labels:
+    labels:
+      user:
+        first_name: "Vorname"
+        last_name: "Nachname"
+        email: "E-Mail"
+        password: "Passwort"
+        password_confirmation: "Passwort wiederholen"
+        street: "Straße"
+        street_number: "Nr."
+        zip: "PLZ"
+        mobile_phone: "Handynummer"
+        date_of_birth: "Geburtsdatum"
+        drivers_license: "Führerschein vorhanden?"
+        bank_account_number: "Kontonummer"
+        bank_identification_code: "BLZ"
     #   defaults:
     #     password: 'Password'
     #   user:
