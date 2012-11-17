@@ -21,6 +21,7 @@ de:
         street: "Straße"
         street_number: "Nr."
         zip: "PLZ"
+        city: "Ort"
         mobile_phone: "Handynummer"
         date_of_birth: "Geburtsdatum"
         drivers_license: "Führerschein vorhanden?"

@@ -7,14 +7,17 @@
   <%= f.input :password, :required => true %>
   <%= f.input :password_confirmation, :required => true %>
 
-  <%= f.input:street %>
-  <%= f.input:street_number %>
-  <%= f.input:zip %>
-  <%= f.input:mobile_phone %>
-  <%= f.input:date_of_birth %>
-  <%= f.input:drivers_license %>
-  <%= f.input:bank_account_number %>
-  <%= f.input:bank_identification_code %>
+  <%= f.input :street %>
+  <%= f.input :street_number %>
+  <%= f.input :zip %>
+  <%= f.input :city %>
+  <%= f.input :mobile_phone %>
+  <%= f.input :date_of_birth, :as => :date, :start_year => Date.today.year - 90,
+              :end_year => Date.today.year - 12,
+              :order => [:day, :month, :year] %>
+  <%= f.input :drivers_license %>
+  <%= f.input :bank_account_number %>
+  <%= f.input :bank_identification_code %>
 
   <%= f.button :submit, t('.signup'), :class => 'btn-primary' %>
 <% end %>
