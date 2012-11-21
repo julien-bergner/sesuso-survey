@@ -27,6 +27,14 @@ de:
         drivers_license: "Führerschein vorhanden?"
         bank_account_number: "Kontonummer"
         bank_identification_code: "BLZ"
+
+      survey:
+         title: "Titel"
+         description: "Beschreibung"
+         city: "Stadt"
+         start_date: "Startdatum"
+         end_date: "Enddatum"
+
     #   defaults:
     #     password: 'Password'
     #   user:

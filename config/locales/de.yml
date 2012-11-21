@@ -14,6 +14,14 @@ de:
       new:
         title: "Registrieren"
         signup: "Weiter"
+  surveys:
+    new:
+      title: "Neue Survey erstellen"
+      back_button: "Zurück"
+    edit:
+      title: "Survey bearbeiten"
+      back_button: "Zurück"
+      show_button: "Survey anzeigen"
 
 
   date:
