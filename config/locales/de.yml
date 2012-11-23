@@ -14,6 +14,13 @@ de:
       new:
         title: "Registrieren"
         signup: "Weiter"
+  users:
+    index:
+      title: "Benutzer"
+      change_role: "Role ändern"
+      edit_user: "Benutzer bearbeiten"
+      destroy_user: "Benutzer löschen"
+      new_user: "Neuen Benutzer anlegen"
   surveys:
     new:
       title: "Neue Survey erstellen"
@@ -157,6 +164,11 @@ de:
         one: ! 'Konnte %{model} nicht speichern: ein Fehler.'
         other: ! 'Konnte %{model} nicht speichern: %{count} Fehler.'
   helpers:
+    actions: "Aktionen"
+    links:
+      new: "Neu"
+      edit: "Bearbeiten"
+      destroy: "Löschen"
     select:
       prompt: Bitte wählen
     submit:
@@ -231,5 +243,10 @@ de:
     errors:
       <<: *errors
   activerecord:
+    models:
+      user:
+
+
+
     errors:
       <<: *errors

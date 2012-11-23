@@ -18,11 +18,11 @@
         <td><%= user.email %></td>
         <td><%= user.roles.first.name.titleize unless user.roles.first.nil? %></td>
         <td>
-          <a data-toggle="modal" href="#role-options-<%= user.id %>" class="btn btn-mini" type="button">Change role</a>
+          <a data-toggle="modal" href="#role-options-<%= user.id %>" class="btn btn-mini" type="button"><%= t(".change_role") %></a>
           <%= render user %>
-          <%= link_to t('.edit', :default => t("helpers.links.edit")),
+          <%= link_to t('.edit', :default => t(".edit_user")),
                       edit_user_path(user), :class => 'btn btn-mini' %>
-          <%= link_to(t('.destroy', :default => t("helpers.links.destroy")),
+          <%= link_to(t('.destroy', :default => t(".destroy_user")),
                       user_path(user),
                       :method => :delete,
                       :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
@@ -33,6 +33,6 @@
   </tbody>
 </table>
 
-<%= link_to t('.new', :default => t("helpers.links.new")),
+<%= link_to t('.new', :default => t(".new_user")),
             new_user_path,
             :class => 'btn btn-primary' %>
