@@ -14,7 +14,13 @@ de:
       new:
         title: "Registrieren"
         signup: "Weiter"
+      edit:
+        title: "Meine Daten ändern"
+        hint_not_change_password: "Leer lassen, wenn du dein Passwort nicht ändern willst."
+        hint_password_to_apply_changes: "Bitte gib dein aktuelles Passwort ein, um die Änderungen zu bestätigen."
+        destroy_account: "Meinen Account löschen"
   users:
+
     index:
       title: "Benutzer"
       change_role: "Role ändern"
@@ -164,7 +170,10 @@ de:
         one: ! 'Konnte %{model} nicht speichern: ein Fehler.'
         other: ! 'Konnte %{model} nicht speichern: %{count} Fehler.'
   helpers:
+    save_changes: "Änderungen speichern"
+    back: "Zurück"
     actions: "Aktionen"
+    confirm: "Bist du sicher?"
     links:
       new: "Neu"
       edit: "Bearbeiten"
