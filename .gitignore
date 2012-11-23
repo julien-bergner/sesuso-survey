@@ -16,3 +16,6 @@ rerun.txt
 pickle-email-*.html
 /.idea/*
 /config/database.yml
+
+# Ignore application configuration
+/config/application.yml
