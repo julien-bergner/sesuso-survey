@@ -22,7 +22,14 @@ de:
       title: "Survey bearbeiten"
       back_button: "Zurück"
       show_button: "Survey anzeigen"
-
+    show:
+      title: "Titel"
+      description: "Beschreibung"
+      city: "Stadt"
+      start_date: "Startdatum"
+      end_date: "Enddatum"
+      edit_button: "Bearbeiten"
+      back_button: "Zurück"
 
   date:
     abbr_day_names:
