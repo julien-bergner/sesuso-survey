@@ -7,6 +7,7 @@
   <%= f.input :password, :required => true %>
   <%= f.input :password_confirmation, :required => true %>
 
+  <% if Figaro.env.use_user_address == "true" %>
     <div class="control-group">
       <%= f.input :street, :wrapper_html => { :class => "inline_field_wrapper", :style => 'width: 275px' } %>
       <%= f.input :street_number, :wrapper_html => { :class => "inline_field_wrapper" }, :input_html => { :maxlength => 5, :style => 'width: 50px'} %>
@@ -15,6 +16,7 @@
       <%= f.input:zip, :wrapper_html => { :class => "inline_field_wrapper", :style => 'width: 120px'}, :input_html => {:maxlength => 5, :style => 'width: 50px'} %>
       <%= f.input:city, :wrapper_html => { :class => "inline_field_wrapper" } %>
     </div>
+  <% end %>
 
   <%= f.input :mobile_phone %>
   <%= f.input :date_of_birth, :as => :date, :start_year => Date.today.year - 90,

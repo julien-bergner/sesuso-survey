@@ -7,7 +7,7 @@
   <%= f.input :password, :autocomplete => "off", :hint => t(".hint_not_change_password"), :required => false %>
   <%= f.input :password_confirmation, :required => false %>
   <%= f.input :current_password, :hint => t(".hint_password_to_apply_changes"), :required => true %>
-
+  <% if Figaro.env.use_user_address == "true" %>
   <div class="control-group">
     <%= f.input :street, :wrapper_html => { :class => "inline_field_wrapper", :style => 'width: 275px' } %>
     <%= f.input :street_number, :wrapper_html => { :class => "inline_field_wrapper" }, :input_html => { :maxlength => 5, :style => 'width: 50px'} %>
@@ -16,7 +16,7 @@
     <%= f.input:zip, :wrapper_html => { :class => "inline_field_wrapper", :style => 'width: 120px' }, :input_html => {:maxlength => 5, :style => 'width: 50px'} %>
     <%= f.input:city, :wrapper_html => { :class => "inline_field_wrapper" } %>
   </div>
-
+  <% end %>
   <%= f.input:mobile_phone %>
   <%= f.input:date_of_birth %>
   <%= f.input:drivers_license %>
