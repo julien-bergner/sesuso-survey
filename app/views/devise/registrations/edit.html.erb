@@ -1,5 +1,5 @@
 <h2><%= t(".title") %></h2>
-<%= simple_form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => { :method => :put, :class => 'form-vertical' }) do |f| %>
+<%= simple_form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => { :method => :put, :class => 'form-horizontal' }) do |f| %>
   <%= f.error_notification %>
   <%= f.input :first_name, :autofocus => true %>
   <%= f.input :last_name %>
@@ -8,14 +8,22 @@
   <%= f.input :password_confirmation, :required => false %>
   <%= f.input :current_password, :hint => t(".hint_password_to_apply_changes"), :required => true %>
 
-  <%= f.input:street %>
-  <%= f.input:street_number %>
-  <%= f.input:zip %>
+  <div class="control-group">
+    <%= f.input :street, :wrapper_html => { :class => "inline_field_wrapper", :style => 'width: 275px' } %>
+    <%= f.input :street_number, :wrapper_html => { :class => "inline_field_wrapper" }, :input_html => { :maxlength => 5, :style => 'width: 50px'} %>
+  </div>
+  <div class="control-group">
+    <%= f.input:zip, :wrapper_html => { :class => "inline_field_wrapper", :style => 'width: 120px' }, :input_html => {:maxlength => 5, :style => 'width: 50px'} %>
+    <%= f.input:city, :wrapper_html => { :class => "inline_field_wrapper" } %>
+  </div>
+
   <%= f.input:mobile_phone %>
   <%= f.input:date_of_birth %>
   <%= f.input:drivers_license %>
-  <%= f.input:bank_account_number %>
-  <%= f.input:bank_identification_code %>
+  <div class="control-group">
+    <%= f.input:bank_account_number, :wrapper_html => { :class => "inline_field_wrapper", :style => 'width: 290px' } %>
+    <%= f.input:bank_identification_code, :wrapper_html => { :class => "inline_field_wrapper" } %>
+  </div>
 
   <%= f.button :submit, t("helpers.save_changes"), :class => 'btn-primary' %>
 <% end %>
@@ -24,3 +32,4 @@
 <br/>
 <br/>
 <%= link_to t("helpers.back"), :back %>
+
