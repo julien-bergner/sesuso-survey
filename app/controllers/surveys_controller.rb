@@ -1,7 +1,10 @@
 class SurveysController < ApplicationController
+  before_filter :authenticate_user!
+  load_and_authorize_resource
   # GET /surveys
   # GET /surveys.json
   def index
+
     @surveys = Survey.all
 
     respond_to do |format|
@@ -13,6 +16,7 @@ class SurveysController < ApplicationController
   # GET /surveys/1
   # GET /surveys/1.json
   def show
+
     @survey = Survey.find(params[:id])
 
     respond_to do |format|
@@ -24,6 +28,7 @@ class SurveysController < ApplicationController
   # GET /surveys/new
   # GET /surveys/new.json
   def new
+
     @survey = Survey.new
 
     respond_to do |format|
@@ -34,12 +39,14 @@ class SurveysController < ApplicationController
 
   # GET /surveys/1/edit
   def edit
+
     @survey = Survey.find(params[:id])
   end
 
   # POST /surveys
   # POST /surveys.json
   def create
+
     @survey = Survey.new(params[:survey])
 
     respond_to do |format|
@@ -56,6 +63,7 @@ class SurveysController < ApplicationController
   # PUT /surveys/1
   # PUT /surveys/1.json
   def update
+
     @survey = Survey.find(params[:id])
 
     respond_to do |format|
@@ -72,6 +80,7 @@ class SurveysController < ApplicationController
   # DELETE /surveys/1
   # DELETE /surveys/1.json
   def destroy
+
     @survey = Survey.find(params[:id])
     @survey.destroy
 
