@@ -1,4 +1,6 @@
 Sesuso::Application.routes.draw do
+  resources :areas
+
   resources :surveys
 
   authenticated :user do
