@@ -28,8 +28,9 @@
       <%= f.input:bank_account_number, :wrapper_html => { :class => "inline_field_wrapper", :style => 'width: 290px' } %>
       <%= f.input:bank_identification_code, :wrapper_html => { :class => "inline_field_wrapper" } %>
     </div>
-
-  <%= f.button :submit, t('.signup'), :class => 'btn-primary' %>
+  <div class="form-actions">
+  <%= f.button :submit, t('.signup'), :class => 'btn-primary',:wrapper_html => { :class => "control-group" } %>
+  </div>
 <% end %>
 
 
