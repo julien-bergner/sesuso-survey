@@ -144,7 +144,7 @@ DEPENDENCIES
   devise (>= 2.1.2)
   figaro
   jquery-rails
-  less
+  less-rails
   pg (>= 0.14.1)
   rails (= 3.2.7)
   rake

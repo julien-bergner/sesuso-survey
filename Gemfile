@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 gem 'rails', '3.2.7'
 
-gem 'less'
+gem "less-rails"
 gem 'sass-rails'
 gem 'coffee-rails'
 gem 'uglifier'
