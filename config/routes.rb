@@ -1,5 +1,5 @@
 Sesuso::Application.routes.draw do
-  resources :areas
+  resources :survey_areas
 
   resources :surveys
 

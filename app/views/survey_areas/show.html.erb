@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Title:</b>
+  <%= @survey_area.title %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%= @survey_area.description %>
+</p>
+
+<p>
+  <b>Location:</b>
+  <%= @survey_area.location %>
+</p>
+
+
+<%= link_to 'Edit', edit_survey_area_path(@survey_area) %> |
+<%= link_to 'Back', survey_areas_path %>

@@ -1,0 +1,27 @@
+<h1>Listing survey_areas</h1>
+
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Description</th>
+    <th>Location</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @survey_areas.each do |survey_area| %>
+  <tr>
+    <td><%= survey_area.title %></td>
+    <td><%= survey_area.description %></td>
+    <td><%= survey_area.location %></td>
+    <td><%= link_to 'Show', survey_area %></td>
+    <td><%= link_to 'Edit', edit_survey_area_path(survey_area) %></td>
+    <td><%= link_to 'Destroy', survey_area, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Survey area', new_survey_area_path %>
