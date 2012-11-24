@@ -12,3 +12,12 @@
  *= require_tree .
 */
 /* negative indent the amount of the padding to maintain the grid system */
+.content {
+  background-color: #EEEEEE;
+  padding: 20px;
+  margin: -20px;
+}
+
+.inline_field_wrapper {
+  display: inline-block;
+}
