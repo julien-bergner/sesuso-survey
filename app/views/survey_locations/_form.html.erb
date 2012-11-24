@@ -1,20 +1,17 @@
-<%= simple_form_for(@survey_location) do |f| %>
-  <%= f.error_notification %>
-
-  <div class="form-inputs">
-    <%= f.input :title %>
-    <%= f.input :description %>
-    <%= f.input :notice %>
-    <%= f.input :street %>
-    <%= f.input :street_number %>
-    <%= f.input :zip %>
-    <%= f.input :city %>
-    <%= f.input :url %>
-    <%= f.input :map_url %>
-    <%= f.input :survey_area_id %>
-  </div>
-
+<%= simple_form_for @survey_location, :html => { :class => 'form-horizontal' } do |f| %>
+  <%= f.input :title %>
+  <%= f.input :description %>
+  <%= f.input :notice %>
+  <%= f.input :street %>
+  <%= f.input :street_number %>
+  <%= f.input :zip %>
+  <%= f.input :city %>
+  <%= f.input :url %>
+  <%= f.input :map_url %>
+  <%= f.input :survey_area_id %>
   <div class="form-actions">
-    <%= f.button :submit %>
+    <%= f.button :submit, :class => 'btn-primary' %>
+    <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+                survey_locations_path, :class => 'btn' %>
   </div>
 <% end %>
