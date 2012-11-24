@@ -7,7 +7,7 @@ gem 'uglifier'
 
 gem "less-rails"
 gem "jquery-rails"
-gem "thin", ">= 1.5.0", :group => :production
+gem "thin", ">= 1.5.0"
 gem "pg", ">= 0.14.1"
 gem 'twitter-bootstrap-rails'
 gem "rake"
