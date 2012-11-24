@@ -1,0 +1,55 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Title:</b>
+  <%= @survey_location.title %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%= @survey_location.description %>
+</p>
+
+<p>
+  <b>Notice:</b>
+  <%= @survey_location.notice %>
+</p>
+
+<p>
+  <b>Street:</b>
+  <%= @survey_location.street %>
+</p>
+
+<p>
+  <b>Street number:</b>
+  <%= @survey_location.street_number %>
+</p>
+
+<p>
+  <b>Zip:</b>
+  <%= @survey_location.zip %>
+</p>
+
+<p>
+  <b>City:</b>
+  <%= @survey_location.city %>
+</p>
+
+<p>
+  <b>Url:</b>
+  <%= @survey_location.url %>
+</p>
+
+<p>
+  <b>Map url:</b>
+  <%= @survey_location.map_url %>
+</p>
+
+<p>
+  <b>Survey area:</b>
+  <%= @survey_location.survey_area_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_survey_location_path(@survey_location) %> |
+<%= link_to 'Back', survey_locations_path %>
