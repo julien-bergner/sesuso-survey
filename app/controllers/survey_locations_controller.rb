@@ -1,4 +1,6 @@
 class SurveyLocationsController < ApplicationController
+  before_filter :authenticate_user!
+  load_and_authorize_resource
   # GET /survey_locations
   # GET /survey_locations.json
   def index
