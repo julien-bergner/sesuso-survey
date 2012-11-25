@@ -11,6 +11,9 @@ class User < ActiveRecord::Base
   attr_accessible :first_name, :last_name, :street, :street_number, :zip, :mobile_phone,
                   :date_of_birth, :drivers_license, :bank_account_number,
                   :bank_identification_code, :email, :password, :password_confirmation, :remember_me
+
+  has_many :survey_locations
+  has_many :survey_areas, :through => :survey_locations
   
 end
 
