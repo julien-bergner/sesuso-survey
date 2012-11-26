@@ -1,11 +1,10 @@
 <%- model_class = SurveyLocation -%>
 <div class="page-header">
-  <h1><%=t '.title', :default => model_class.model_name.human.pluralize %></h1>
+  <h1><%= t('.title') %></h1>
 </div>
 <table class="table table-striped">
   <thead>
     <tr>
-      <th><%= model_class.human_attribute_name(:id) %></th>
       <th><%= model_class.human_attribute_name(:title) %></th>
       <th><%= model_class.human_attribute_name(:description) %></th>
       <th><%= model_class.human_attribute_name(:notice) %></th>
@@ -15,16 +14,13 @@
       <th><%= model_class.human_attribute_name(:city) %></th>
       <th><%= model_class.human_attribute_name(:url) %></th>
       <th><%= model_class.human_attribute_name(:map_url) %></th>
-      <th><%= model_class.human_attribute_name(:survey_area_id) %></th>
-      <th><%= model_class.human_attribute_name(:created_at) %></th>
       <th><%=t '.actions', :default => t("helpers.actions") %></th>
     </tr>
   </thead>
   <tbody>
     <% @survey_locations.each do |survey_location| %>
       <tr>
-        <td><%= link_to survey_location.id, survey_location_path(survey_location) %></td>
-        <td><%= survey_location.title %></td>
+        <td><%= link_to survey_location.title, survey_location_path(survey_location) %></td>
         <td><%= survey_location.description %></td>
         <td><%= survey_location.notice %></td>
         <td><%= survey_location.street %></td>
@@ -32,23 +28,26 @@
         <td><%= survey_location.zip %></td>
         <td><%= survey_location.city %></td>
         <td><%= survey_location.url %></td>
-        <td><%= survey_location.map_url %></td>
-        <td><%= survey_location.survey_area_id %></td>
-        <td><%=l survey_location.created_at %></td>
+        <td><%= link_to "Go", survey_location.map_url %></td>
         <td>
+          <div style="text-align: center;">
           <%= link_to t('.edit', :default => t("helpers.links.edit")),
                       edit_survey_location_path(survey_location), :class => 'btn btn-mini' %>
+          <br/>
           <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
                       survey_location_path(survey_location),
                       :method => :delete,
                       :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
                       :class => 'btn btn-mini btn-danger' %>
+          </div>
         </td>
+
       </tr>
     <% end %>
   </tbody>
 </table>
-
-<%= link_to t('.new', :default => t("helpers.links.new")),
+<div class="form-actions">
+<%= link_to t('.new_button'),
             new_survey_location_path,
             :class => 'btn btn-primary' %>
+</div>
