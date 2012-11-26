@@ -27,6 +27,19 @@ de:
       edit_user: "Benutzer bearbeiten"
       destroy_user: "Benutzer löschen"
       new_user: "Neuen Benutzer anlegen"
+
+
+  survey_locations:
+    new:
+      title: "Neuen Ort erstellen"
+    edit:
+      title: "Ort bearbeiten"
+    show:
+    index:
+      title: "Alle Orte"
+      new_button: "Neuen Ort anlegen"
+
+
   surveys:
     new:
       title: "Neue Survey erstellen"
@@ -43,6 +56,7 @@ de:
       end_date: "Enddatum"
       edit_button: "Bearbeiten"
       back_button: "Zurück"
+
 
   date:
     abbr_day_names:
@@ -174,10 +188,13 @@ de:
     back: "Zurück"
     actions: "Aktionen"
     confirm: "Bist du sicher?"
+
     links:
       new: "Neu"
       edit: "Bearbeiten"
       destroy: "Löschen"
+      cancel: "Abbrechen"
+      back: "Zurück"
     select:
       prompt: Bitte wählen
     submit:
@@ -253,9 +270,20 @@ de:
       <<: *errors
   activerecord:
     models:
-      user:
-
-
-
+      survey_location:
+        one: "Ort"
+        other: "Orte"
+    attributes:
+      survey_location:
+        title: "Name"
+        description: "Beschreibung"
+        notice: "Notiz"
+        street: "Straße"
+        street_number: "Nr."
+        zip: "PLZ"
+        city: "Ort"
+        url: "Website"
+        map_url: "GoogleMaps"
+        survey_area_id: "Bereich"
     errors:
       <<: *errors

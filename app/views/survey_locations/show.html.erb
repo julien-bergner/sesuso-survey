@@ -1,29 +1,29 @@
 <%- model_class = SurveyLocation -%>
 <div class="page-header">
-  <h1><%=t '.title', :default => model_class.model_name.human %></h1>
+  <h1><%="#{t '.title', :default => model_class.model_name.human}: \"#{@survey_location.title}\"" %> </h1>
 </div>
 
 <dl class="dl-horizontal">
   <dt><strong><%= model_class.human_attribute_name(:title) %>:</strong></dt>
-  <dd><%= @survey_location.title %></dd>
+  <dd><%= @survey_location.title %>&nbsp;</dd>
   <dt><strong><%= model_class.human_attribute_name(:description) %>:</strong></dt>
-  <dd><%= @survey_location.description %></dd>
+  <dd><%= @survey_location.description %>&nbsp;</dd>
   <dt><strong><%= model_class.human_attribute_name(:notice) %>:</strong></dt>
-  <dd><%= @survey_location.notice %></dd>
+  <dd><%= @survey_location.notice %>&nbsp;</dd>
   <dt><strong><%= model_class.human_attribute_name(:street) %>:</strong></dt>
   <dd><%= @survey_location.street %></dd>
   <dt><strong><%= model_class.human_attribute_name(:street_number) %>:</strong></dt>
-  <dd><%= @survey_location.street_number %></dd>
+  <dd><%= @survey_location.street_number %>&nbsp;</dd>
   <dt><strong><%= model_class.human_attribute_name(:zip) %>:</strong></dt>
-  <dd><%= @survey_location.zip %></dd>
+  <dd><%= @survey_location.zip %>&nbsp;</dd>
   <dt><strong><%= model_class.human_attribute_name(:city) %>:</strong></dt>
-  <dd><%= @survey_location.city %></dd>
+  <dd><%= @survey_location.city %>&nbsp;</dd>
   <dt><strong><%= model_class.human_attribute_name(:url) %>:</strong></dt>
-  <dd><%= @survey_location.url %></dd>
+  <dd><%= link_to @survey_location.url, @survey_location.url %>&nbsp;</dd>
   <dt><strong><%= model_class.human_attribute_name(:map_url) %>:</strong></dt>
-  <dd><%= @survey_location.map_url %></dd>
+  <dd><%= link_to @survey_location.map_url, @survey_location.map_url %>&nbsp;</dd>
   <dt><strong><%= model_class.human_attribute_name(:survey_area_id) %>:</strong></dt>
-  <dd><%= @survey_location.survey_area_id %></dd>
+  <dd><%= @survey_location.survey_area_id %>&nbsp;</dd>
 </dl>
 
 <div class="form-actions">
