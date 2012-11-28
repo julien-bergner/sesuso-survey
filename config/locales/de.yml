@@ -63,6 +63,7 @@ de:
       new_button: "Neue Untersuchung anlegen"
 
 
+
   date:
     abbr_day_names:
     - So
@@ -275,26 +276,33 @@ de:
       <<: *errors
   activerecord:
     models:
+
       survey:
         one: "Untersuchung"
         other: "Untersuchungen"
+
       survey_area:
         one: "Gebiet"
         other: "Gebiete"
+
       survey_location:
         one: "Ort"
         other: "Orte"
+
     attributes:
+
       survey:
         title: "Titel"
         description: "Beschreibung"
         city: "Stadt"
         start_date: "Startdatum"
         end_date: "Enddatum"
+
       survey_area:
         title: "Titel"
         description: "Beschreibung"
         location: "Ort"
+
       survey_location:
         title: "Name"
         description: "Beschreibung"
@@ -306,7 +314,6 @@ de:
         url: "Website"
         map_url: "GoogleMaps"
         survey_area_id: "Bereich"
-
 
     errors:
       <<: *errors
