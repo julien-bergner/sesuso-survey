@@ -85,6 +85,16 @@ de:
       title: "Alle Untersuchungen"
       new_button: "Neue Untersuchung anlegen"
 
+  survey_data_sets:
+    new:
+      title: "Neuen Datensatz erstellen"
+    edit:
+      title: "Datensatz bearbeiten"
+    show:
+    index:
+      title: "Alle Datensätze"
+      new_button: "Neuen Datensatz anlegen"
+
 
 
   date:
@@ -317,6 +327,10 @@ de:
         one: "Ort"
         other: "Orte"
 
+      survey_data_set:
+        one: "Datensatz"
+        other: "Datensätze"
+
     attributes:
 
       user:
@@ -361,6 +375,12 @@ de:
         url: "Website"
         map_url: "GoogleMaps"
         survey_area_id: "Bereich"
+
+      survey_data_set:
+        start: "Beginn"
+        end: "Ende"
+        survey_location_id: "gehört zu Ort"
+        user_id: "wird bearbeitet von Benutzer"
 
     errors:
       <<: *errors
