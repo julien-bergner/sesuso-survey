@@ -79,6 +79,7 @@ de:
     edit:
       title: "Untersuchung bearbeiten"
     show:
+      corresponding_survey_areas: "Zugeordnete Gebiete"
     index:
       title: "Alle Untersuchungen"
       new_button: "Neue Untersuchung anlegen"
@@ -211,6 +212,7 @@ de:
         one: ! 'Konnte %{model} nicht speichern: ein Fehler.'
         other: ! 'Konnte %{model} nicht speichern: %{count} Fehler.'
   helpers:
+    none: "keine"
     save_changes: "Änderungen speichern"
     back: "Zurück"
     actions: "Aktionen"
@@ -345,6 +347,7 @@ de:
         title: "Titel"
         description: "Beschreibung"
         location: "Ort"
+        survey_id: "gehört zu Untersuchung"
 
       survey_location:
         title: "Name"
