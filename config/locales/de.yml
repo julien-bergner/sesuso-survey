@@ -32,6 +32,16 @@ de:
         logout: "Ausloggen"
         signup: "Registrieren"
         forgot_password: "Passwort vergessen?"
+    passwords:
+      new:
+        forgot_password: "Passwort vergessen?"
+        send_reset_password_instructions: "Hilf mir!"
+      edit:
+        change_password: "Dein Password ändern"
+        new_password: "Neues Passwort"
+        confirm_password: "Neues Passwort bestätigen"
+        change_password_button: "Passwort ändern"
+
 
   users:
 
