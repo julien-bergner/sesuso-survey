@@ -291,6 +291,23 @@ de:
 
     attributes:
 
+      user:
+        first_name: "Vorname"
+        last_name: "Nachname"
+        email: "E-Mail"
+        password: "Passwort"
+        password_confirmation: "Passwort wiederholen"
+        current_password: "Aktuelles Passwort"
+        street: "Straße"
+        street_number: "Nr."
+        zip: "PLZ"
+        city: "Ort"
+        mobile_phone: "Handynummer"
+        date_of_birth: "Geburtsdatum"
+        drivers_license: "Führerschein vorhanden?"
+        bank_account_number: "Kontonummer"
+        bank_identification_code: "BLZ"
+
       survey:
         title: "Titel"
         description: "Beschreibung"
