@@ -9,6 +9,9 @@ de:
       edit_account: "Account bearbeiten"
       administrate_users: "Benutzer verwalten"
       signup: "Registrieren"
+      show_all_surveys: "Alle Untersuchungen anzeigen"
+      show_all_survey_locations: "Alle Orte anzeigen"
+      show_all_survey_areas: "Alle Gebiete anzeigen"
   devise:
     registrations:
       new:

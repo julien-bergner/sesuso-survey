@@ -17,7 +17,11 @@
       <li>
       <%= link_to t('.administrate_users'), users_path %>
       </li>
-    <% end %>
+      <li><%= link_to t('.show_all_surveys'), surveys_path %></li>
+      <li><%= link_to t('.show_all_survey_locations'), survey_locations_path %></li>
+      <li><%= link_to t('.show_all_survey_areas'), survey_areas_path %></li>
+
+<% end %>
   <% else %>
     <li>
     <%= link_to t('.signup'), new_user_registration_path %>
