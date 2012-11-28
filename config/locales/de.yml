@@ -22,6 +22,17 @@ de:
         hint_not_change_password: "Leer lassen, wenn du dein Passwort nicht ändern willst."
         hint_password_to_apply_changes: "Bitte gib dein aktuelles Passwort ein, um die Änderungen zu bestätigen."
         destroy_account: "Meinen Account löschen"
+    sessions:
+      new:
+        title: "Einloggen"
+        sign_in_button: "Einloggen"
+    shared:
+      links:
+        login: "Einloggen"
+        logout: "Ausloggen"
+        signup: "Registrieren"
+        forgot_password: "Passwort vergessen?"
+
   users:
 
     index:
@@ -277,6 +288,10 @@ de:
   activerecord:
     models:
 
+      user:
+        one: "Benuter"
+        other: "Benutzer"
+
       survey:
         one: "Untersuchung"
         other: "Untersuchungen"
@@ -307,6 +322,7 @@ de:
         drivers_license: "Führerschein vorhanden?"
         bank_account_number: "Kontonummer"
         bank_identification_code: "BLZ"
+        remember_me: "Eingeloggt bleiben?"
 
       survey:
         title: "Titel"
