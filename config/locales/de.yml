@@ -54,8 +54,7 @@ de:
 
   surveys:
     new:
-      title: "Neue Survey erstellen"
-      back_button: "Zurück"
+      title: "Neue Untersuchung erstellen"
     edit:
       title: "Untersuchung bearbeiten"
     show:
