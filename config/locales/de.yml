@@ -80,6 +80,7 @@ de:
       title: "Untersuchung bearbeiten"
     show:
       corresponding_survey_areas: "Zugeordnete Gebiete"
+      corresponding_survey_locations: "Zugehörige Orte"
     index:
       title: "Alle Untersuchungen"
       new_button: "Neue Untersuchung anlegen"
