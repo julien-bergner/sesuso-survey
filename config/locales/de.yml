@@ -28,6 +28,15 @@ de:
       destroy_user: "Benutzer löschen"
       new_user: "Neuen Benutzer anlegen"
 
+  survey_areas:
+    new:
+      title: "Neues Gebiet erstellen"
+    edit:
+      title: "Gebiet bearbeiten"
+    show:
+    index:
+      title: "Alle Gebiete"
+      new_button: "Neues Gebiet anlegen"
 
   survey_locations:
     new:
@@ -270,6 +279,9 @@ de:
       <<: *errors
   activerecord:
     models:
+      survey_area:
+        one: "Gebiet"
+        other: "Gebiete"
       survey_location:
         one: "Ort"
         other: "Orte"
@@ -285,5 +297,10 @@ de:
         url: "Website"
         map_url: "GoogleMaps"
         survey_area_id: "Bereich"
+      survey_area:
+        title: "Titel"
+        description: "Beschreibung"
+        location: "Ort"
+
     errors:
       <<: *errors

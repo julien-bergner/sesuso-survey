@@ -1,15 +1,15 @@
 <%- model_class = SurveyArea -%>
 <div class="page-header">
-  <h1><%=t '.title', :default => model_class.model_name.human %></h1>
+  <h1><%= "#{t '.title', :default => model_class.model_name.human}: \"#{@survey_area.title}\"" %></h1>
 </div>
 
 <dl class="dl-horizontal">
   <dt><strong><%= model_class.human_attribute_name(:title) %>:</strong></dt>
-  <dd><%= @survey_area.title %></dd>
+  <dd><%= @survey_area.title %>&nbsp;</dd>
   <dt><strong><%= model_class.human_attribute_name(:description) %>:</strong></dt>
-  <dd><%= @survey_area.description %></dd>
+  <dd><%= @survey_area.description %>&nbsp;</dd>
   <dt><strong><%= model_class.human_attribute_name(:location) %>:</strong></dt>
-  <dd><%= @survey_area.location %></dd>
+  <dd><%= @survey_area.location %>&nbsp;</dd>
 </dl>
 
 <div class="form-actions">
