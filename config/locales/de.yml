@@ -57,17 +57,11 @@ de:
       title: "Neue Survey erstellen"
       back_button: "Zurück"
     edit:
-      title: "Survey bearbeiten"
-      back_button: "Zurück"
-      show_button: "Survey anzeigen"
+      title: "Untersuchung bearbeiten"
     show:
-      title: "Titel"
-      description: "Beschreibung"
-      city: "Stadt"
-      start_date: "Startdatum"
-      end_date: "Enddatum"
-      edit_button: "Bearbeiten"
-      back_button: "Zurück"
+    index:
+      title: "Alle Untersuchungen"
+      new_button: "Neue Untersuchung anlegen"
 
 
   date:
@@ -282,6 +276,9 @@ de:
       <<: *errors
   activerecord:
     models:
+      survey:
+        one: "Untersuchung"
+        other: "Untersuchungen"
       survey_area:
         one: "Gebiet"
         other: "Gebiete"
@@ -289,6 +286,16 @@ de:
         one: "Ort"
         other: "Orte"
     attributes:
+      survey:
+        title: "Titel"
+        description: "Beschreibung"
+        city: "Stadt"
+        start_date: "Startdatum"
+        end_date: "Enddatum"
+      survey_area:
+        title: "Titel"
+        description: "Beschreibung"
+        location: "Ort"
       survey_location:
         title: "Name"
         description: "Beschreibung"
@@ -300,10 +307,7 @@ de:
         url: "Website"
         map_url: "GoogleMaps"
         survey_area_id: "Bereich"
-      survey_area:
-        title: "Titel"
-        description: "Beschreibung"
-        location: "Ort"
+
 
     errors:
       <<: *errors
