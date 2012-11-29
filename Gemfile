@@ -5,6 +5,7 @@ gem 'sass-rails'
 gem 'coffee-rails'
 gem 'uglifier'
 
+gem 'gmaps4rails'
 gem "less-rails"
 gem "jquery-rails"
 gem "thin", ">= 1.5.0"
