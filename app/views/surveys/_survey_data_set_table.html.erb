@@ -1,0 +1,24 @@
+<table class="table table-striped">
+
+  <tbody>
+  <% survey_data_sets.each do |survey_data_set| %>
+      <tr>
+        <td><%= link_to survey_data_set.id, survey_data_set_path(survey_data_set) %></td>
+        <td><%= survey_data_set.start %></td>
+        <td><%= survey_data_set.end %></td>
+        <td><%= survey_data_set.user_id %></td>
+        <td><%= survey_data_set.survey_location_id %></td>
+
+        <td>
+          <%= link_to t('.edit', :default => t("helpers.links.edit")),
+                      edit_survey_data_set_path(survey_data_set), :class => 'btn btn-mini' %>
+          <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
+                      survey_data_set_path(survey_data_set),
+                      :method => :delete,
+                      :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
+                      :class => 'btn btn-mini btn-danger' %>
+        </td>
+      </tr>
+  <% end %>
+  </tbody>
+</table>

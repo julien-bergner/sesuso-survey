@@ -1,0 +1,25 @@
+<table class="table table-condensed grey-table">
+  <tbody>
+  <% survey_locations.each do |survey_location| %>
+      <tr>
+        <td></td>
+        <td><%= link_to survey_location.title, survey_location_path(survey_location) %></td>
+        <td>
+          <div style="text-align: center;">
+            <%= link_to "Website", survey_location.url, :class => 'btn btn-mini' %>
+            <%= link_to "GoogleMaps", survey_location.map_url, :class => 'btn btn-mini' %>
+            <%= link_to t('.edit', :default => t("helpers.links.edit")),
+                        edit_survey_location_path(survey_location), :class => 'btn btn-mini' %>
+
+            <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
+                        survey_location_path(survey_location),
+                        :method => :delete,
+                        :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
+                        :class => 'btn btn-mini btn-danger' %>
+          </div>
+        </td>
+
+      </tr>
+  <% end %>
+  </tbody>
+</table>

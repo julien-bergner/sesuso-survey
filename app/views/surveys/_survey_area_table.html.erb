@@ -1,0 +1,14 @@
+<table class="table table-condensed table-bordered white-table">
+  <tbody>
+  <% survey_areas.each do |survey_area| %>
+      <tr>
+        <td><h3><%= link_to survey_area.title, survey_area_path(survey_area) %></h3></td>
+      </tr>
+      <tr>
+        <td>
+          <%= render :partial => "survey_location_table", :locals => { :survey_locations => survey_area.survey_locations } %>
+        </td>
+      </tr>
+  <% end %>
+  </tbody>
+</table>
