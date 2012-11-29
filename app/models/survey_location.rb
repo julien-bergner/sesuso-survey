@@ -3,5 +3,6 @@ class SurveyLocation < ActiveRecord::Base
 
   belongs_to :survey_area
   validates_presence_of :title
+  has_many :survey_data_sets
 
 end
