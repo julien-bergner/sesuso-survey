@@ -12,8 +12,10 @@ class User < ActiveRecord::Base
                   :date_of_birth, :drivers_license, :bank_account_number,
                   :bank_identification_code, :email, :password, :password_confirmation, :remember_me
 
-  has_many :survey_locations
+  has_many :survey_data_sets
+  has_many :survey_locations, :through => :survey_data_sets
   has_many :survey_areas, :through => :survey_locations
+  has_many :surveys, :through => :survey_areas
   
 end
 

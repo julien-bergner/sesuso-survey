@@ -1,5 +1,8 @@
 <table class="table table-condensed table-bordered white-table">
   <tbody>
+  <% unless current_user.has_role? :admin %>
+    <% survey_areas = (survey_areas & current_user.survey_areas) %>
+  <% end %>
   <% survey_areas.each do |survey_area| %>
       <tr>
         <td><h3><%= link_to survey_area.title, survey_area_path(survey_area) %></h3></td>

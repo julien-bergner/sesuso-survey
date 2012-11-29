@@ -23,7 +23,7 @@
 <% if @survey.survey_areas.count == 0 %>
     <h4><%= t('helpers.none')%></h4>
 <% else %>
-    <%= render :partial => "partials/survey_area_table", :locals => { :survey_areas => @survey.survey_areas } %>
+    <%= render :partial => "partials/survey_area_table", :locals => { :survey_areas => @survey_areas } %>
 <% end %>
 
 <hr>

@@ -19,7 +19,15 @@ class SurveysController < ApplicationController
 
     @survey = Survey.find(params[:id])
 
-    respond_to do |format|
+
+
+    if current_user.has_role? :admin
+      @survey_areas = @survey.survey_areas
+    elsif current_user.has_role? :agent
+      @survey_areas = current_user.survey_areas
+    end
+
+  respond_to do |format|
       format.html # show.html.erb
       format.json { render json: @survey }
     end

@@ -1,5 +1,8 @@
 <table class="table table-condensed grey-table">
   <tbody>
+  <% unless current_user.has_role? :admin %>
+      <% survey_locations = (survey_locations & current_user.survey_locations) %>
+  <% end %>
   <% survey_locations.each do |survey_location| %>
       <tr>
         <td></td>

@@ -5,9 +5,8 @@ class ApplicationController < ActionController::Base
     stored_location_for(resource) ||
         if resource.is_a?(User) && resource.has_role?(:admin)
           surveys_url
-        else if resource.is_a?(User) && resource.has_role?(:agent)
+        elsif resource.is_a?(User) && resource.has_role?(:agent)
           survey_areas_url
-          end
         end
   end
 

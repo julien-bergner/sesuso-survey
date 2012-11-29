@@ -1,11 +1,15 @@
 <table class="table table-condensed white-table">
 
   <tbody>
+  <% unless current_user.has_role? :admin %>
+      <% survey_data_sets = (survey_data_sets & current_user.survey_data_sets) %>
+  <% end %>
   <% survey_data_sets.each do |survey_data_set| %>
       <tr>
         <td></td>
         <td><%= "#{t('.begin')}: #{l survey_data_set.start, :format => :short}"  %></td>
         <td><%= "#{t('.end')}: #{l survey_data_set.end, :format => :short}" %></td>
+        <% if current_user.has_role? :admin %>
         <td><%= "#{t('.agent')}:" %>
           <% if survey_data_set.user_id.nil? %>
               offen
@@ -13,6 +17,7 @@
               <%= User.find(survey_data_set.user_id).first_name %>
           <% end %>
         </td>
+        <% end %>
         <td>
           <%= link_to t('.insert_values_link'), "#", :class => 'btn btn-mini' %>
         </td>
