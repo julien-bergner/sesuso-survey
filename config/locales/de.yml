@@ -84,6 +84,8 @@ de:
     index:
       title: "Alle Untersuchungen"
       new_button: "Neue Untersuchung anlegen"
+
+  partials:
     survey_location_table:
       website_link: "Website"
       map_link: "GoogleMaps"
