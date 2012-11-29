@@ -6,19 +6,16 @@
         <td><%= link_to survey_location.title, survey_location_path(survey_location) %></td>
         <td>
           <div style="text-align: center;">
-            <%= link_to "Website", survey_location.url, :class => 'btn btn-mini' %>
-            <%= link_to "GoogleMaps", survey_location.map_url, :class => 'btn btn-mini' %>
-            <%= link_to t('.edit', :default => t("helpers.links.edit")),
-                        edit_survey_location_path(survey_location), :class => 'btn btn-mini' %>
-
-            <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
-                        survey_location_path(survey_location),
-                        :method => :delete,
-                        :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
-                        :class => 'btn btn-mini btn-danger' %>
+            <%= link_to t('.website_link'), survey_location.url, :class => 'btn btn-mini' %>
+            <%= link_to t('.map_link'), survey_location.map_url, :class => 'btn btn-mini' %>
           </div>
         </td>
 
+      </tr>
+      <tr>
+        <td colspan="3">
+          <%= render :partial => "survey_data_set_table", :locals => { :survey_data_sets => survey_location.survey_data_sets } %>
+        </td>
       </tr>
   <% end %>
   </tbody>
