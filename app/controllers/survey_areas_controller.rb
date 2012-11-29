@@ -16,6 +16,9 @@ class SurveyAreasController < ApplicationController
   # GET /survey_areas/1.json
   def show
     @survey_area = SurveyArea.find(params[:id])
+    @survey_areas = Array.new
+    @survey_areas.push(@survey_area)
+    @json = @survey_area.survey_locations.to_gmaps4rails
 
     respond_to do |format|
       format.html # show.html.erb
