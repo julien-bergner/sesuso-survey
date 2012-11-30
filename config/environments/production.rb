@@ -61,7 +61,18 @@ Sesuso::Application.configure do
   # Send deprecation notices to registered listeners
   config.active_support.deprecation = :notify
 
-  config.action_mailer.default_url_options = { :host => 'example.com' }
+  ActionMailer::Base.smtp_settings = {
+      :enable_starttls_auto => true,
+      :address            => Figaro.env.smtp_adress,
+      :port               => Figaro.env.smtp_port,
+      :tls                  => true,
+      :domain             => Figaro.env.smtp_domain,
+      :authentication     => :plain,
+      :user_name          => Figaro.env.user,
+      :password           => Figaro.env.password
+  }
+
+  config.action_mailer.default_url_options = { :host => Figaro.env.mail_host }
   # ActionMailer Config
   # Setup for production - deliveries, no errors raised
   config.action_mailer.delivery_method = :smtp
