@@ -16,7 +16,7 @@
 
 <div class="form-actions">
   <%= link_to t('.back', :default => t("helpers.links.back")),
-              survey_data_sets_path, :class => 'btn'  %>
+              :back, :class => 'btn'  %>
   <%= if can? :edit, @survey_data_set then link_to t('.edit', :default => t("helpers.links.edit")),
               edit_survey_data_set_path(@survey_data_set), :class => 'btn' end %>
   <%= if can? :destroy, @survey_data_set then link_to t('.destroy', :default => t("helpers.links.destroy")),
