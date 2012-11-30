@@ -8,11 +8,7 @@ class ApplicationController < ActionController::Base
           @final_url = surveys_url
         elsif user.has_role?(:agent)
           @user = User.find(user.id)
-          if @user.surveys.count == 1 then
-            @final_url = survey_url(@user.surveys.first)
-          else
-            @final_url = surveys_url
-          end
+          @final_url = survey_url(@user.surveys.first)
         end
     @final_url
   end
