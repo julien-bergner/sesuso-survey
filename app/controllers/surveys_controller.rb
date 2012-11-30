@@ -19,12 +19,12 @@ class SurveysController < ApplicationController
 
     @survey = Survey.find(params[:id])
 
-
+    @survey_areas = @survey.survey_areas
 
     if current_user.has_role? :admin
-      @survey_areas = @survey.survey_areas
+      @json = @survey.survey_locations.to_gmaps4rails
     elsif current_user.has_role? :agent
-      @survey_areas = current_user.survey_areas
+      @json = current_user.survey_locations.to_gmaps4rails
     end
 
   respond_to do |format|

@@ -10,36 +10,56 @@
 %>
 
 <dl class="dl-horizontal">
+  <% unless @survey_location.title.nil? %>
   <dt><strong><%= model_class.human_attribute_name(:title) %>:</strong></dt>
   <dd><%= @survey_location.title %>&nbsp;</dd>
+  <% end %>
+  <% unless @survey_location.description.nil? %>
   <dt><strong><%= model_class.human_attribute_name(:description) %>:</strong></dt>
   <dd><%= @survey_location.description %>&nbsp;</dd>
+  <% end %>
+  <% unless @survey_location.notice.nil? %>
   <dt><strong><%= model_class.human_attribute_name(:notice) %>:</strong></dt>
   <dd><%= @survey_location.notice %>&nbsp;</dd>
+  <% end %>
+  <% unless @survey_location.street.nil? %>
   <dt><strong><%= model_class.human_attribute_name(:street) %>:</strong></dt>
   <dd><%= @survey_location.street %></dd>
+  <% end %>
+  <% unless @survey_location.street_number.nil? %>
   <dt><strong><%= model_class.human_attribute_name(:street_number) %>:</strong></dt>
   <dd><%= @survey_location.street_number %>&nbsp;</dd>
+  <% end %>
+  <% unless @survey_location.zip.nil? %>
   <dt><strong><%= model_class.human_attribute_name(:zip) %>:</strong></dt>
   <dd><%= @survey_location.zip %>&nbsp;</dd>
+  <% end %>
+  <% unless @survey_location.city.nil? %>
   <dt><strong><%= model_class.human_attribute_name(:city) %>:</strong></dt>
   <dd><%= @survey_location.city %>&nbsp;</dd>
+  <% end %>
+  <% unless @survey_location.url.nil? %>
   <dt><strong><%= model_class.human_attribute_name(:url) %>:</strong></dt>
   <dd><%= link_to @survey_location.url, @survey_location.url %>&nbsp;</dd>
+  <% end %>
+  <% unless @survey_location.map_url.nil? %>
   <dt><strong><%= model_class.human_attribute_name(:map_url) %>:</strong></dt>
   <dd><%= link_to @survey_location.map_url, @survey_location.map_url %>&nbsp;</dd>
+  <% end %>
+  <% unless @survey_location.survey_area.nil? %>
   <dt><strong><%= model_class.human_attribute_name(:survey_area_id) %>:</strong></dt>
-  <dd><%= @survey_location.survey_area_id %>&nbsp;</dd>
+  <dd><%= link_to @survey_location.survey_area.title, @survey_location.survey_area %>&nbsp;</dd>
+  <% end %>
 </dl>
 
 <div class="form-actions">
   <%= link_to t('.back', :default => t("helpers.links.back")),
               survey_locations_path, :class => 'btn'  %>
-  <%= link_to t('.edit', :default => t("helpers.links.edit")),
-              edit_survey_location_path(@survey_location), :class => 'btn' %>
-  <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
+  <%= if can? :edit, @survey_location then link_to t('.edit', :default => t("helpers.links.edit")),
+              edit_survey_location_path(@survey_location), :class => 'btn' end %>
+  <%= if can? :destroy, @survey_location then link_to t('.destroy', :default => t("helpers.links.destroy")),
               survey_location_path(@survey_location),
               :method => 'delete',
               :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
-              :class => 'btn btn-danger' %>
+              :class => 'btn btn-danger' end %>
 </div>

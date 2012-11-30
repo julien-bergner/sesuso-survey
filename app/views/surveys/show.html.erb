@@ -1,41 +1,50 @@
 <%- model_class = Survey -%>
 <div class="page-header">
-  <h1><%=t '.title', :default => model_class.model_name.human %></h1>
+  <h1><%= "#{t '.title', :default => model_class.model_name.human}#{unless @survey.title.nil? then ": " << @survey.title end } " %></h1>
 </div>
 
+<%= gmaps({
+                  "map_options" => {"auto_zoom" => true },
+                  "markers" => {"data" => @json }
+          })
+%>
+
 <dl class="dl-horizontal">
-  <dt><strong><%= model_class.human_attribute_name(:title) %>:</strong></dt>
-  <dd><%= @survey.title %>&nbsp;</dd>
+  <% unless @survey.title.nil? %>
+  <!-- <dt><strong><%= model_class.human_attribute_name(:title) %>:</strong></dt> -->
+  <!-- <dd><%= @survey.title %>&nbsp;</dd> -->
+  <% end %>
+  <% unless @survey.description.nil? %>
   <dt><strong><%= model_class.human_attribute_name(:description) %>:</strong></dt>
   <dd><%= @survey.description %>&nbsp;</dd>
+  <% end %>
+  <% unless @survey.city.nil? %>
   <dt><strong><%= model_class.human_attribute_name(:city) %>:</strong></dt>
   <dd><%= @survey.city %>&nbsp;</dd>
+  <% end %>
+  <% unless @survey.start_date.nil? %>
   <dt><strong><%= model_class.human_attribute_name(:start_date) %>:</strong></dt>
   <dd><%= l @survey.start_date, :format => :long %>&nbsp;</dd>
+  <% end %>
+  <% unless @survey.end_date.nil? %>
   <dt><strong><%= model_class.human_attribute_name(:end_date) %>:</strong></dt>
   <dd><%= l @survey.end_date, :format => :long %>&nbsp;</dd>
+  <% end %>
 </dl>
 
 
 <hr>
 
-<h2><%= t('.corresponding_survey_areas') %></h2>
-<% if @survey.survey_areas.count == 0 %>
-    <h4><%= t('helpers.none')%></h4>
-<% else %>
-    <%= render :partial => "partials/survey_area_table", :locals => { :survey_areas => @survey_areas } %>
-<% end %>
-
-<hr>
+<%= render :partial => "partials/survey_area_table", :locals => { :survey_areas => @survey_areas } %>
 
 <div class="form-actions">
   <%= link_to t('.back', :default => t("helpers.links.back")),
               surveys_path, :class => 'btn'  %>
-  <%= link_to t('.edit', :default => t("helpers.links.edit")),
-              edit_survey_path(@survey), :class => 'btn' %>
-  <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
+  <%= if can? :edit, @survey then link_to t('.edit', :default => t("helpers.links.edit")),
+              edit_survey_path(@survey), :class => 'btn' end %>
+  <%= if can? :destroy, @survey then link_to t('.destroy', :default => t("helpers.links.destroy")),
               survey_path(@survey),
               :method => 'delete',
               :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
-              :class => 'btn btn-danger' %>
+              :class => 'btn btn-danger' end %>
 </div>
