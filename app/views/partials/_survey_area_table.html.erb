@@ -5,7 +5,9 @@
   <% end %>
   <% survey_areas.each do |survey_area| %>
       <tr>
-        <td><h3><%= link_to survey_area.title, survey_area_path(survey_area) %></h3></td>
+        <td><h3><%= link_to survey_area.title, survey_area_path(survey_area) %> &nbsp;
+          <%= link_to t('.link_to_overview'), survey_area_path(survey_area), :class => 'btn btn-mini' %></h3></td>
+
       </tr>
       <tr>
         <td>

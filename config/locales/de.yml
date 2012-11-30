@@ -86,9 +86,12 @@ de:
       new_button: "Neue Untersuchung anlegen"
 
   partials:
+    survey_area_table:
+      link_to_overview: "Übersichtskarte anzeigen"
     survey_location_table:
+      show: "Details"
       website_link: "Website"
-      map_link: "GoogleMaps"
+      map_link: "Ort auf Karte zeigen"
     survey_data_set_table:
       insert_values_link: "Werte eintragen"
       agent: "Agent"
