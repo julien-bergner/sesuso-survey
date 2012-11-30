@@ -6,7 +6,7 @@
   <% survey_locations.each do |survey_location| %>
       <tr>
         <td></td>
-        <td><%= link_to survey_location.title, survey_location_path(survey_location) %> &nbsp;
+        <td><h4 style="display: inline;"><%= link_to survey_location.title, survey_location_path(survey_location) %></h4>&nbsp;&nbsp;
             <%= link_to t('.show'), survey_location, :class => 'btn btn-mini' %> &nbsp;
             <%= unless survey_location.url.nil? then link_to t('.website_link'), survey_location.url, :class => 'btn btn-mini' end %> &nbsp;
             <%= link_to t('.map_link'), survey_location, :class => 'btn btn-mini' %>
