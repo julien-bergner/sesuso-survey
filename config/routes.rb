@@ -11,6 +11,9 @@ Sesuso::Application.routes.draw do
     root :to => 'home#index'
   end
   root :to => "home#index"
+
+  match 'home/leereVersprechen' => 'Home#leereVersprechen', :as => :dummy
+
   devise_for :users
   resources :users
 end
