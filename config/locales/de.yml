@@ -4,6 +4,7 @@ de:
       title: "Willkommen!"
   layouts:
     navigation:
+      project_title: "Sesuso"
       login: "Einloggen"
       logout: "Ausloggen"
       edit_account: "Account bearbeiten"
@@ -12,6 +13,8 @@ de:
       show_all_surveys: "Alle Untersuchungen anzeigen"
       show_all_survey_locations: "Alle Orte anzeigen"
       show_all_survey_areas: "Alle Gebiete anzeigen"
+      logged_in_as: "Angemeldet als"
+      lists: "Listen"
   devise:
     registrations:
       new:
