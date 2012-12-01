@@ -63,13 +63,13 @@ Sesuso::Application.configure do
 
   ActionMailer::Base.smtp_settings = {
       :enable_starttls_auto => true,
-      :address            => Figaro.env.smtp_adress,
+      :address            => Figaro.env.smtp_address,
       :port               => Figaro.env.smtp_port,
       :tls                  => true,
       :domain             => Figaro.env.smtp_domain,
       :authentication     => :plain,
-      :user_name          => Figaro.env.user,
-      :password           => Figaro.env.password
+      :user_name          => Figaro.env.smtp_user,
+      :password           => Figaro.env.smtp_password
   }
 
   config.action_mailer.default_url_options = { :host => Figaro.env.mail_host }
