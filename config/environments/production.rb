@@ -65,7 +65,6 @@ Sesuso::Application.configure do
       :enable_starttls_auto => true,
       :address            => Figaro.env.smtp_address,
       :port               => Figaro.env.smtp_port,
-      :tls                  => true,
       :domain             => Figaro.env.smtp_domain,
       :authentication     => :plain,
       :user_name          => Figaro.env.smtp_user,
