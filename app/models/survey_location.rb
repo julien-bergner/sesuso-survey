@@ -1,5 +1,5 @@
 class SurveyLocation < ActiveRecord::Base
-  acts_as_gmappable
+  acts_as_gmappable :check_process => false
 
   attr_accessible :city, :description, :map_url, :notice, :street, :street_number, :survey_area_id, :title, :url, :zip
 
