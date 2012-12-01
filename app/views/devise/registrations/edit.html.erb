@@ -18,7 +18,9 @@
   </div>
   <% end %>
   <%= f.input:mobile_phone %>
-  <%= f.input:date_of_birth %>
+  <%= f.input:date_of_birth, :as => :date, :start_year => 1980,
+             :end_year => Date.today.year - 18,
+             :order => [ :day, :month, :year] %>
   <%= f.input:drivers_license %>
   <div class="control-group">
     <%= f.input:bank_account_number, :wrapper_html => { :class => "inline_field_wrapper", :style => 'width: 290px' } %>
