@@ -1,0 +1,15 @@
+<%= simple_form_for @survey_value_set, :html => { :class => 'form-horizontal' } do |f| %>
+  <%= f.input :value1 %>
+  <%= f.input :value2 %>
+  <%= f.input :value3 %>
+  <%= f.input :value4 %>
+  <%= f.input :value5 %>
+  <%= f.input :value6 %>
+  <%= f.input :value7 %>
+  <%= f.input :survey_data_set_id %>
+  <div class="form-actions">
+    <%= f.button :submit, :class => 'btn-primary' %>
+    <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+                survey_value_sets_path, :class => 'btn' %>
+  </div>
+<% end %>
