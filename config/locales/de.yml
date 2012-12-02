@@ -98,6 +98,7 @@ de:
       map_link: "Ort auf Karte zeigen"
     survey_data_set_table:
       insert_values_link: "Werte eintragen"
+      show_values_link: "Werte anzeigen"
       agent: "Agent"
       begin: "Beginn"
       end: "Ende"
