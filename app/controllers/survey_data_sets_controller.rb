@@ -1,4 +1,6 @@
 class SurveyDataSetsController < ApplicationController
+  before_filter :authenticate_user!
+  load_and_authorize_resource
   # GET /survey_data_sets
   # GET /survey_data_sets.json
   def index

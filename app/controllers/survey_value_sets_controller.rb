@@ -1,4 +1,6 @@
 class SurveyValueSetsController < ApplicationController
+  before_filter :authenticate_user!
+  load_and_authorize_resource
   # GET /survey_value_sets
   # GET /survey_value_sets.json
   def index
