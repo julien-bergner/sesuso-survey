@@ -1,35 +1,28 @@
 <%- model_class = SurveyValueSet -%>
 <div class="page-header">
-  <h1><%=t '.title', :default => model_class.model_name.human %></h1>
+  <h1><%= "#{model_class.model_name.human} #{t ('.for')} #{@survey_value_set.survey_data_set.survey_location.title} #{t ('.at')} #{@survey_value_set.survey_data_set.start.strftime("%d.%m.%y")}" %></h1>
 </div>
 
 <dl class="dl-horizontal">
   <dt><strong><%= model_class.human_attribute_name(:value1) %>:</strong></dt>
-  <dd><%= @survey_value_set.value1 %></dd>
+  <dd><%= @survey_value_set.value1 %>&nbsp;</dd>
   <dt><strong><%= model_class.human_attribute_name(:value2) %>:</strong></dt>
-  <dd><%= @survey_value_set.value2 %></dd>
+  <dd><%= @survey_value_set.value2 %>&nbsp;</dd>
   <dt><strong><%= model_class.human_attribute_name(:value3) %>:</strong></dt>
-  <dd><%= @survey_value_set.value3 %></dd>
+  <dd><%= @survey_value_set.value3 %>&nbsp;</dd>
   <dt><strong><%= model_class.human_attribute_name(:value4) %>:</strong></dt>
-  <dd><%= @survey_value_set.value4 %></dd>
+  <dd><%= @survey_value_set.value4 %>&nbsp;</dd>
   <dt><strong><%= model_class.human_attribute_name(:value5) %>:</strong></dt>
-  <dd><%= @survey_value_set.value5 %></dd>
+  <dd><%= @survey_value_set.value5 %>&nbsp;</dd>
   <dt><strong><%= model_class.human_attribute_name(:value6) %>:</strong></dt>
-  <dd><%= @survey_value_set.value6 %></dd>
+  <dd><%= @survey_value_set.value6 %>&nbsp;</dd>
   <dt><strong><%= model_class.human_attribute_name(:value7) %>:</strong></dt>
-  <dd><%= @survey_value_set.value7 %></dd>
-  <dt><strong><%= model_class.human_attribute_name(:survey_data_set_id) %>:</strong></dt>
-  <dd><%= @survey_value_set.survey_data_set_id %></dd>
+  <dd><%= @survey_value_set.value7 %>&nbsp;</dd>
 </dl>
 
 <div class="form-actions">
   <%= link_to t('.back', :default => t("helpers.links.back")),
-              survey_value_sets_path, :class => 'btn'  %>
+              survey_path(@survey_value_set.survey), :class => 'btn'  %>
   <%= link_to t('.edit', :default => t("helpers.links.edit")),
               edit_survey_value_set_path(@survey_value_set), :class => 'btn' %>
-  <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
-              survey_value_set_path(@survey_value_set),
-              :method => 'delete',
-              :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
-              :class => 'btn btn-danger' %>
 </div>
