@@ -1,4 +1,6 @@
 Sesuso::Application.routes.draw do
+  resources :survey_value_sets
+
   resources :survey_data_sets
 
   resources :survey_locations

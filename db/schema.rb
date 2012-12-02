@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121129144407) do
+ActiveRecord::Schema.define(:version => 20121202031916) do
 
   create_table "roles", :force => true do |t|
     t.string   "name"
@@ -59,6 +59,19 @@ ActiveRecord::Schema.define(:version => 20121129144407) do
     t.float    "latitude"
     t.float    "longitude"
     t.boolean  "gmaps"
+  end
+
+  create_table "survey_value_sets", :force => true do |t|
+    t.integer  "value1"
+    t.boolean  "value2"
+    t.boolean  "value3"
+    t.boolean  "value4"
+    t.boolean  "value5"
+    t.boolean  "value6"
+    t.boolean  "value7"
+    t.integer  "survey_data_set_id"
+    t.datetime "created_at",         :null => false
+    t.datetime "updated_at",         :null => false
   end
 
   create_table "surveys", :force => true do |t|
