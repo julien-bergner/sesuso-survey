@@ -14,35 +14,35 @@
   <dt><strong><%= model_class.human_attribute_name(:title) %>:</strong></dt>
   <dd><%= @survey_location.title %>&nbsp;</dd>
   <% end %>
-  <% unless @survey_location.description.nil? %>
+  <% unless @survey_location.description.nil? || @survey_location.description.empty? %>
   <dt><strong><%= model_class.human_attribute_name(:description) %>:</strong></dt>
   <dd><%= @survey_location.description %>&nbsp;</dd>
   <% end %>
-  <% unless @survey_location.notice.nil? %>
+  <% unless @survey_location.notice.nil? || @survey_location.notice.empty? %>
   <dt><strong><%= model_class.human_attribute_name(:notice) %>:</strong></dt>
   <dd><%= @survey_location.notice %>&nbsp;</dd>
   <% end %>
-  <% unless @survey_location.street.nil? %>
+  <% unless @survey_location.street.nil? || @survey_location.street.empty? %>
   <dt><strong><%= model_class.human_attribute_name(:street) %>:</strong></dt>
   <dd><%= @survey_location.street %></dd>
   <% end %>
-  <% unless @survey_location.street_number.nil? %>
+  <% unless @survey_location.street_number.nil? || @survey_location.street_number.empty? %>
   <dt><strong><%= model_class.human_attribute_name(:street_number) %>:</strong></dt>
   <dd><%= @survey_location.street_number %>&nbsp;</dd>
   <% end %>
-  <% unless @survey_location.zip.nil? %>
+  <% unless @survey_location.zip.nil? || @survey_location.zip.empty? %>
   <dt><strong><%= model_class.human_attribute_name(:zip) %>:</strong></dt>
   <dd><%= @survey_location.zip %>&nbsp;</dd>
   <% end %>
-  <% unless @survey_location.city.nil? %>
+  <% unless @survey_location.city.nil? || @survey_location.city.empty? %>
   <dt><strong><%= model_class.human_attribute_name(:city) %>:</strong></dt>
   <dd><%= @survey_location.city %>&nbsp;</dd>
   <% end %>
-  <% unless @survey_location.url.nil? %>
+  <% unless @survey_location.url.nil? || @survey_location.url.empty? %>
   <dt><strong><%= model_class.human_attribute_name(:url) %>:</strong></dt>
   <dd><%= link_to @survey_location.url, @survey_location.url %>&nbsp;</dd>
   <% end %>
-  <% unless @survey_location.map_url.nil? %>
+  <% unless @survey_location.map_url.nil? || @survey_location.map_url.empty? %>
   <dt><strong><%= model_class.human_attribute_name(:map_url) %>:</strong></dt>
   <dd><%= link_to @survey_location.map_url, @survey_location.map_url %>&nbsp;</dd>
   <% end %>
