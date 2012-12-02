@@ -11,11 +11,11 @@
 <dl class="dl-horizontal">
   <!-- <dt><strong><%= model_class.human_attribute_name(:title) %>:</strong></dt> -->
   <!-- <dd><%= @survey_area.title %>&nbsp;</dd>                                   -->
-  <% unless @survey_area.description.nil? %>
+  <% unless @survey_area.description.nil? || @survey_area.description.empty? %>
     <dt><strong><%= model_class.human_attribute_name(:description) %>:</strong></dt>
     <dd><%= @survey_area.description %>&nbsp;</dd>
   <% end %>
-  <% unless @survey_area.location.nil? %>
+  <% unless @survey_area.location.nil? || @survey_area.location.empty? %>
     <dt><strong><%= model_class.human_attribute_name(:location) %>:</strong></dt>
     <dd><%= @survey_area.location %>&nbsp;</dd>
   <% end %>
