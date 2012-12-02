@@ -1,6 +1,5 @@
 <%- model_class = SurveyValueSet -%>
 <div class="page-header">
-  <h1><%=t '.title', :default => t('helpers.titles.edit', :model => model_class.model_name.human,
-                                   :default => "Edit #{model_class.model_name.human}") %></h1>
+  <h1><%= "#{t '.title'} #{t ('.for')} #{@survey_value_set.survey_data_set.survey_location.title} #{t ('.at')} #{@survey_value_set.survey_data_set.start.strftime("%d.%m.%y")}" %></h1>
 </div>
 <%= render :partial => 'form' %>

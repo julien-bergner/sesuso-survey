@@ -76,6 +76,7 @@ de:
       new_button: "Neuen Ort anlegen"
 
 
+
   surveys:
     new:
       title: "Neue Untersuchung erstellen"
@@ -110,6 +111,21 @@ de:
     index:
       title: "Alle Datensätze"
       new_button: "Neuen Datensatz anlegen"
+
+  survey_value_sets:
+    new:
+      title: "Neuen Messwert erstellen"
+    edit:
+      title: "Wert eintragen"
+      edit_button: "Wert eintragen"
+      for: "für"
+      at: "am"
+    show:
+      for: "für"
+      at: "am"
+    index:
+      title: "Alle Messwerte"
+      new_button: "Neuen Messwert anlegen"
 
 
 
@@ -347,6 +363,10 @@ de:
         one: "Datensatz"
         other: "Datensätze"
 
+      survey_value_set:
+        one: "Wert"
+        other: "Werte"
+
     attributes:
 
       user:
@@ -397,6 +417,15 @@ de:
         end: "Ende"
         survey_location_id: "gehört zu Ort"
         user_id: "wird bearbeitet von Benutzer"
+
+      survey_value_set:
+        value1: "Wert 1"
+        value2: "Wert 2"
+        value3: "Wert 3"
+        value4: "Wert 4"
+        value5: "Wert 5"
+        value6: "Wert 6"
+        value7: "Wert 7"
 
     errors:
       <<: *errors
