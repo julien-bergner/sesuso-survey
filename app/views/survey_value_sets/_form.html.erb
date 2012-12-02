@@ -1,4 +1,6 @@
 <%= simple_form_for @survey_value_set, :html => { :class => 'form-horizontal' } do |f| %>
+  <%= f.input :time %>
+  <hr>
   <%= f.input :value1 %>
   <hr>
   <%= f.input :value2, :as => :radio_buttons %>
