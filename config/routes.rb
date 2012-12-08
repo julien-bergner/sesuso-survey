@@ -17,5 +17,8 @@ Sesuso::Application.routes.draw do
   match 'home/leereVersprechen' => 'Home#leereVersprechen', :as => :dummy
 
   devise_for :users
-  resources :users
+  resources :users do
+    put 'sendConfirmationFormPDFToBrowser', :on => :member
+  end
 end
+
