@@ -26,7 +26,11 @@
               </ul>
             </li>
             <li class="divider-vertical"></li>
-    <% end %>
+        <% end %>
+        <% if current_user.has_role? :agent %>
+            <li><%= link_to "Test", :prepare_confirmation_form %></li>
+        <% end %>
+
         <li><%= link_to t('.edit_account'), edit_user_registration_path %></li>
         <% if current_user.has_role? :admin %>
             <li><%= link_to t('.administrate_users'), users_path %></li>
