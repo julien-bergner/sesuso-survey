@@ -46,6 +46,8 @@ GEM
       orm_adapter (~> 0.1)
       railties (~> 3.1)
       warden (~> 1.2.1)
+    doc_raptor (0.3.2)
+      httparty (>= 0.7.0)
     erubis (2.7.0)
     eventmachine (1.0.0)
     execjs (1.4.0)
@@ -54,6 +56,9 @@ GEM
       rails (~> 3.0)
     gmaps4rails (1.5.6)
     hike (1.2.1)
+    httparty (0.9.0)
+      multi_json (~> 1.0)
+      multi_xml
     i18n (0.6.1)
     journey (1.0.4)
     jquery-rails (2.1.3)
@@ -72,6 +77,7 @@ GEM
       treetop (~> 1.4.8)
     mime-types (1.19)
     multi_json (1.3.7)
+    multi_xml (0.5.1)
     orm_adapter (0.4.0)
     pg (0.14.1)
     polyglot (0.3.3)
@@ -142,6 +148,7 @@ DEPENDENCIES
   cancan (>= 1.6.8)
   coffee-rails
   devise (>= 2.1.2)
+  doc_raptor
   figaro
   gmaps4rails
   jquery-rails

@@ -30,4 +30,13 @@ class UsersController < ApplicationController
       redirect_to users_path, :notice => "Can't delete yourself."
     end
   end
+
+  def sendTConfirmationFormPDFToBrowser
+    @user = current_user
+    if Rails.env.production? then isTest = false else isTest = true end
+    send_data(DocRaptor.create(:document_content => @user.getTextForPDFGeneration(), :document_type => "pdf", :name => "Test", :test => isTest).body,
+              :filename => "Test.pdf", :type => "pdf"
+    )
+  end
+
 end

@@ -16,6 +16,17 @@ class User < ActiveRecord::Base
   has_many :survey_locations, :through => :survey_data_sets
   has_many :survey_areas, :through => :survey_locations
   has_many :surveys, :through => :survey_areas
+
+  def getTextForPDFGeneration
+
+    ActionView::Base.new(Rails.configuration.paths["app/views"].first).render(
+        :partial => 'partials/confirmation_form', :format => :html,
+        :locals => {}
+
+    )
+
+
+  end
   
 end
 

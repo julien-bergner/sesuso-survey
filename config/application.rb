@@ -72,6 +72,8 @@ module Sesuso
 
     config.assets.initialize_on_precompile = false
 
+    DocRaptor.api_key Figaro.env.doc_raptor_api_key
+
     # Version of your assets, change this if you want to expire all your assets
     config.assets.version = '1.0'
   end

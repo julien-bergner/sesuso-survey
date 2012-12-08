@@ -11,7 +11,11 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
+<<<<<<< HEAD
 ActiveRecord::Schema.define(:version => 20121202081903) do
+=======
+ActiveRecord::Schema.define(:version => 20121202031916) do
+>>>>>>> 4dc91f00b662ae4c3bc1135c00dac0aa9a15c095
 
   create_table "roles", :force => true do |t|
     t.string   "name"
@@ -72,7 +76,10 @@ ActiveRecord::Schema.define(:version => 20121202081903) do
     t.integer  "survey_data_set_id"
     t.datetime "created_at",         :null => false
     t.datetime "updated_at",         :null => false
+<<<<<<< HEAD
     t.time     "time"
+=======
+>>>>>>> 4dc91f00b662ae4c3bc1135c00dac0aa9a15c095
   end
 
   create_table "surveys", :force => true do |t|
