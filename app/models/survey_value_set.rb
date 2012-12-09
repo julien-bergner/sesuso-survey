@@ -1,5 +1,5 @@
 class SurveyValueSet < ActiveRecord::Base
-  attr_accessible :survey_data_set_id, :value1, :value2, :value3, :value4, :value5, :value6, :value7
+  attr_accessible :survey_data_set_id, :time, :value1, :value2, :value3, :value4, :value5, :value6, :value7, :value8, :value9
 
   belongs_to :survey_data_set
   has_one :survey_location, :through => :survey_data_set
