@@ -428,6 +428,8 @@ de:
         value5: "Wert 5"
         value6: "Wert 6"
         value7: "Wert 7"
+        value8: "Wert 8"
+        value9: "Wert 9"
 
     errors:
       <<: *errors
