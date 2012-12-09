@@ -27,7 +27,7 @@
             </li>
             <li class="divider-vertical"></li>
         <% end %>
-        <% if current_user.has_role? :agent %>
+        <% if current_user.has_role? :agent && false %>
             <li><%= link_to t('.prepare_affidavit'), :prepare_affidavit %></li>
         <% end %>
 
