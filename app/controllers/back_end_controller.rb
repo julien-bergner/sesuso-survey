@@ -1,6 +1,11 @@
 class BackEndController < ApplicationController
 
-  def prepare_confirmation_form
+  def prepare_affidavit
+
+    respond_to do |format|
+      format.html
+
+    end
 
   end
 

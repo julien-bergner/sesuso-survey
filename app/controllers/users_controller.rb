@@ -31,7 +31,7 @@ class UsersController < ApplicationController
     end
   end
 
-  def sendTConfirmationFormPDFToBrowser
+  def send_affidavit_pdf_to_browser
     @user = current_user
     if Rails.env.production? then isTest = false else isTest = true end
     send_data(DocRaptor.create(:document_content => @user.getTextForPDFGeneration(), :document_type => "pdf", :name => "Test", :test => isTest).body,

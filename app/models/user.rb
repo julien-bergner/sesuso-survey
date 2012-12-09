@@ -20,7 +20,7 @@ class User < ActiveRecord::Base
   def getTextForPDFGeneration
 
     ActionView::Base.new(Rails.configuration.paths["app/views"].first).render(
-        :partial => 'partials/confirmation_form', :format => :html,
+        :partial => 'partials/affidavit', :format => :html,
         :locals => {}
 
     )

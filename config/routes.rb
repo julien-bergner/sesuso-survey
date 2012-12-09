@@ -15,11 +15,12 @@ Sesuso::Application.routes.draw do
   root :to => "home#index"
 
   match 'home/leereVersprechen' => 'Home#leereVersprechen', :as => :dummy
-  match 'back_end/prepare_confirmation_form' => 'back_end#prepare_confirmation_form', :as => :prepare_confirmation_form
+  match 'back_end/prepare_affidavit' => 'back_end#prepare_affidavit', :as => :prepare_affidavit
 
   devise_for :users
+
   resources :users do
-    put 'sendConfirmationFormPDFToBrowser', :on => :member
+    put 'send_affidavit_pdf_to_browser', :on => :member
   end
 end
 
