@@ -32,9 +32,17 @@ class UsersController < ApplicationController
   end
 
   def send_affidavit_pdf_to_browser
+
+    @selectedSurveyDataSetsParam = params[:selected_survey_data_sets_list]
+    @selectedSurveyDataSetsStrings = @selectedSurveyDataSetsParam.split(',')
+
+    @selectedSurveyDataSets = SurveyDataSet.find_all_by_id(@selectedSurveyDataSetsStrings)
+    @selectedSurveyDataSets.sort!{ |a, b| a.start <=> b.start }
+
     @user = current_user
+
     if Rails.env.production? then isTest = false else isTest = true end
-    send_data(DocRaptor.create(:document_content => @user.getTextForPDFGeneration(), :document_type => "pdf", :name => "Test", :test => isTest).body,
+    send_data(DocRaptor.create(:document_content => @user.getAffidavitForPDFGeneration(@selectedSurveyDataSets), :document_type => "pdf", :name => "Test", :test => isTest).body,
               :filename => "Test.pdf", :type => "pdf"
     )
   end

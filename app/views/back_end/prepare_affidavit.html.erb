@@ -1,2 +1,33 @@
-<h1>Bla</h1>
-<%= link_to "Test-PDF", send_affidavit_pdf_to_browser_user_path(current_user), :method => :put, :class => "btn" %>
+<h1><%= t('.title') %></h1>
+<br/>
+<h3><%= t('.instruction') %></h3>
+<table class="table">
+  <thead>
+    <tr>
+      <th></th>
+      <th><%= t('.date') %></th>
+      <th><%= t('.location') %></th>
+    </tr>
+  </thead>
+
+  <tbody>
+<% @survey_data_sets.each do |ds| %>
+
+    <tr>
+      <td><%= check_box_tag ds.id, '', false, :class => "check-box" %></td>
+      <td><%= l ds.start.to_date, :format => :long  %></td>
+      <td><%= ds.survey_location.title %></td>
+
+    </tr>
+<% end %>
+</tbody>
+</table>
+<br/>
+<h5><%= t('.notice') %></h5>
+<br/>
+<%= form_tag :receive_selected_survey_data_sets, :method => "put" %>
+<%= hidden_field_tag :selected_survey_data_sets_list, "" %>
+
+<%= submit_tag(t(".download_button"), :class => "btn", :id => "download-button", :disabled => true) %>
+<br/>
+
