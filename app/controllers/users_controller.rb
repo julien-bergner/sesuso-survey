@@ -42,8 +42,8 @@ class UsersController < ApplicationController
     @user = current_user
 
     if Rails.env.production? then isTest = false else isTest = true end
-    send_data(DocRaptor.create(:document_content => @user.getAffidavitForPDFGeneration(@selectedSurveyDataSets), :document_type => "pdf", :name => "Test", :test => isTest).body,
-              :filename => "Test.pdf", :type => "pdf"
+    send_data(DocRaptor.create(:document_content => @user.getAffidavitForPDFGeneration(@selectedSurveyDataSets), :document_type => "pdf", :name => t('users.affidavit_pdf_title'), :test => isTest).body,
+              :filename => t('users.affidavit_pdf_filename'), :type => "pdf"
     )
   end
 

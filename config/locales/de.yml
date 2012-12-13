@@ -57,7 +57,7 @@ de:
 
 
   users:
-
+    affidavit_pdf_filename: "Eidesstattliche-Versicherung.pdf"
     index:
       title: "Benutzer"
       change_role: "Role ändern"
