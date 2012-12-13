@@ -23,6 +23,7 @@
               <%= link_to t('.insert_values_link'), edit_survey_value_set_path(survey_data_set.survey_value_set), :class => 'btn btn-mini' %>
           <% else %>
               <%= link_to t('.show_values_link'), survey_value_set_path(survey_data_set.survey_value_set), :class => 'btn btn-mini' %>
+              <%= link_to t('.edit_values_link'), edit_survey_value_set_path(survey_data_set.survey_value_set), :class => 'btn btn-mini' %>
           <% end %>
         </td>
       </tr>
