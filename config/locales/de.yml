@@ -1,4 +1,13 @@
 de:
+  back_end:
+    error: "Bitte fülle in deinem Benutzerprofil die Felder Vorname, Name, Straße, Hausnummer, PLZ, Ort und Geburtsdatum aus!"
+    prepare_affidavit:
+      title: "Meine Messungen"
+      notice: "(Hier werden alle Messungen angezeigt, bei denen zu mindestens die Uhrzeit und die Anzahl der Besucher angegeben hast.)"
+      instruction: "Bitte wähle aus, für welche Messungen du das Formular für die eidesstattliche Versicherung herunterladen möchtest:"
+      date: "Datum"
+      location: "Ort"
+      download_button: "Formular herunterladen"
   home:
     index:
       title: "Willkommen!"
