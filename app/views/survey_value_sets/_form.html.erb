@@ -18,7 +18,6 @@
 
     <div class="form-actions">
     <%= f.button :submit, t('survey_value_sets.edit.edit_button'), :class => 'btn-primary' %>
-    <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
-                survey_value_sets_path, :class => 'btn' %>
+    <%= backToRootLink %>
   </div>
 <% end %>
