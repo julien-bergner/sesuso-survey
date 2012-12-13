@@ -13,6 +13,7 @@ de:
       title: "Willkommen!"
   layouts:
     navigation:
+      home: "Home"
       project_title: "Sesuso"
       login: "Einloggen"
       logout: "Ausloggen"

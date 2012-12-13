@@ -10,6 +10,7 @@ class ApplicationController < ActionController::Base
           @user = User.find(user.id)
           @final_url = survey_url(@user.surveys.first)
         end
+    session["user_root_return_to"] = @final_url
     @final_url
   end
 
