@@ -133,8 +133,11 @@ de:
       for: "für"
       at: "am"
     show:
+      oclock: "Uhr"
       for: "für"
       at: "am"
+      bool_yes: "Ja"
+      bool_no: "Nein"
     index:
       title: "Alle Messwerte"
       new_button: "Neuen Messwert anlegen"
@@ -431,6 +434,7 @@ de:
         user_id: "wird bearbeitet von Benutzer"
 
       survey_value_set:
+        time: "Uhrzeit"
         value1: "Wert 1"
         value2: "Wert 2"
         value3: "Wert 3"

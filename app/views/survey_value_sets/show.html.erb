@@ -4,20 +4,28 @@
 </div>
 
 <dl class="dl-horizontal">
+  <dt><strong><%= model_class.human_attribute_name(:time) %>:</strong></dt>
+  <dd><%= "#{@survey_value_set.time.strftime("%k:%M")} #{t('.oclock')}" %>&nbsp;</dd>
   <dt><strong><%= model_class.human_attribute_name(:value1) %>:</strong></dt>
   <dd><%= @survey_value_set.value1 %>&nbsp;</dd>
   <dt><strong><%= model_class.human_attribute_name(:value2) %>:</strong></dt>
-  <dd><%= @survey_value_set.value2 %>&nbsp;</dd>
+  <dd><%= if @survey_value_set.value2 == true then "#{ t ('.bool_yes')}" else "#{ t ('.bool_no')}" end %>&nbsp;</dd>
+  <h4><%= t('survey_value_sets.edit.text1') %></h4>
   <dt><strong><%= model_class.human_attribute_name(:value3) %>:</strong></dt>
-  <dd><%= @survey_value_set.value3 %>&nbsp;</dd>
+  <dd><%= if @survey_value_set.value3 == true then "#{ t ('.bool_yes')}" else "#{ t ('.bool_no')}" end %>&nbsp;</dd>
   <dt><strong><%= model_class.human_attribute_name(:value4) %>:</strong></dt>
-  <dd><%= @survey_value_set.value4 %>&nbsp;</dd>
+  <dd><%= if @survey_value_set.value4 == true then "#{ t ('.bool_yes')}" else "#{ t ('.bool_no')}" end %>&nbsp;</dd>
   <dt><strong><%= model_class.human_attribute_name(:value5) %>:</strong></dt>
-  <dd><%= @survey_value_set.value5 %>&nbsp;</dd>
+  <dd><%= if @survey_value_set.value5 == true then "#{ t ('.bool_yes')}" else "#{ t ('.bool_no')}" end %>&nbsp;</dd>
   <dt><strong><%= model_class.human_attribute_name(:value6) %>:</strong></dt>
-  <dd><%= @survey_value_set.value6 %>&nbsp;</dd>
+  <dd><%= if @survey_value_set.value6 == true then "#{ t ('.bool_yes')}" else "#{ t ('.bool_no')}" end %>&nbsp;</dd>
   <dt><strong><%= model_class.human_attribute_name(:value7) %>:</strong></dt>
-  <dd><%= @survey_value_set.value7 %>&nbsp;</dd>
+  <dd><%= if @survey_value_set.value7 == true then "#{ t ('.bool_yes')}" else "#{ t ('.bool_no')}" end %>&nbsp;</dd>
+  <h4><%= t('survey_value_sets.edit.text2') %></h4>
+  <dt><strong><%= model_class.human_attribute_name(:value8) %>:</strong></dt>
+  <dd><%= if @survey_value_set.value8 == true then "#{ t ('.bool_yes')}" else "#{ t ('.bool_no')}" end %>&nbsp;</dd>
+  <dt><strong><%= model_class.human_attribute_name(:value9) %>:</strong></dt>
+  <dd><%= if @survey_value_set.value9 == true then "#{ t ('.bool_yes')}" else "#{ t ('.bool_no')}" end %>&nbsp;</dd>
 </dl>
 
 <div class="form-actions">
