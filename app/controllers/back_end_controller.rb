@@ -4,7 +4,12 @@ class BackEndController < ApplicationController
   def prepare_affidavit
 
     if current_user.allPersonalDataProvided?
-      @survey_data_sets = current_user.survey_data_sets
+      if current_user.has_role? :admin
+        @survey_data_sets = SurveyDataSet.all
+      else
+        @survey_data_sets = current_user.survey_data_sets
+      end
+
       @survey_data_sets.select! { |a| not a.survey_value_set.value1.nil? and not a.survey_value_set.value1 == "" and
           not a.survey_value_set.time.nil? and not a.survey_value_set.time == "" }
       @survey_data_sets.sort!{ |a, b| a.start <=> b.start }
