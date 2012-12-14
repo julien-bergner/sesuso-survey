@@ -6,13 +6,14 @@ class Ability
 
     if user.has_role? :admin
       can :manage, :all
+      can :prepare, :affidavit
     end
 
-    user ||= User.new # guest user (not logged in)
     if user.has_role? :agent
       cannot :read, User
       can :show, [Survey, SurveyArea, SurveyLocation, SurveyValueSet, SurveyDataSet]
       can :update, SurveyValueSet
+      can :prepare, :affidavit
     end
     # Define abilities for the passed in user here. For example:
     #

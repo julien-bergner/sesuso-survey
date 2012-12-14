@@ -1,7 +1,8 @@
 class BackEndController < ApplicationController
-  before_filter :authenticate_user!
+
 
   def prepare_affidavit
+    authorize! :prepare, :affidavit
 
     if current_user.allPersonalDataProvided?
       if current_user.has_role? :admin
@@ -24,6 +25,7 @@ class BackEndController < ApplicationController
   end
 
   def receive_selected_survey_data_sets
+    authorize! :prepare, :affidavit
 
     redirect_to send_affidavit_pdf_to_browser_user_path(current_user.id, :selected_survey_data_sets_list => params[:selected_survey_data_sets_list])
 
